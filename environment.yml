@@ -1,0 +1,10 @@
+name: sentiment
+channels:
+    - default
+dependencies:
+    - python=3.6
+    - numpy
+    - pandas
+    - scikit-learn
+    - tensorflow
+    - tqdm
