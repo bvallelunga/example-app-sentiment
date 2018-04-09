@@ -1,10 +1,13 @@
 # Sentiment
-Discover the sentiment of texts. Trained on millions of Amazon reviews."
+Easily find the sentiment of a sentence; trained on millions of praising, neutral, and negative Amazon reviews.
 
 **Possible Use Cases**
-  * score the tone of an email in an email client
-  * understand the general perception of a product
-
+  * active support: route tweets and support emails to the proper support team.
+     - negative sentiment messages to crisis support
+     - neutral sentiment with automated replys
+  * discover extremely positive messages as showcases of happy customers
+  * filter extremely negative messages in chat rooms
+  
 
 ## Input Scheme
 The input should contain an array of texts. 
