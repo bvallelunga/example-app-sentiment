@@ -8,7 +8,7 @@ Discover the sentiment of texts. Trained on millions of Amazon reviews."
 
 ## Input Scheme
 The input should contain an array of texts. 
-```json
+``` json
 {
   "texts": ["What a beautiful product.", "The color is very dull."]
 }
@@ -18,7 +18,7 @@ The input should contain an array of texts.
 The output will map each input text to a score. Positive receive positive scores while negative texts receive negative 
 scores. 
  
-```json
+``` json
 {
   "texts": 
     {
