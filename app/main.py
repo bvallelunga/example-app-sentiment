@@ -2,7 +2,6 @@ from encoder import Model
 from utils import load_model_params
 
 MODEL_PARAMS_PATH = 'model'
-SENTIMENT_NEURON_IDX = 2388
 SCORE_PRECISION = 2
 MAX_TEXT_COUNT = 10
 MAX_CHAR_COUNT = 1500
@@ -28,7 +27,7 @@ class ModelInterface(object):
         if any(len(string) > MAX_CHAR_COUNT for string in input['texts']):
             raise ValueError("Number of characters per text can not exceed {}.".format(MAX_CHAR_COUNT))
 
-        scores = self.model.transform(input['texts'])[:, SENTIMENT_NEURON_IDX]
+        scores = self.model.predict(input['texts'])
         results = {input['texts'][i]: {'score': round(scores[i].item(), ndigits=SCORE_PRECISION)}
                    for i in range(len(scores))}
         return {'texts': results}
