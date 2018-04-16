@@ -1,5 +1,5 @@
-from encoder import Model
-from utils import load_model_params
+from .encoder import Model
+from .utils import load_model_params
 
 MODEL_PARAMS_PATH = 'model'
 SCORE_PRECISION = 2
@@ -31,8 +31,3 @@ class ModelInterface(object):
         results = {input['texts'][i]: {'score': round(scores[i].item(), ndigits=SCORE_PRECISION)}
                    for i in range(len(scores))}
         return {'texts': results}
-
-
-if __name__ == '__main__':
-    interface = ModelInterface()
-    print(interface.prediction({"texts": ["What a beautiful product.", "The color is very dull."]}))
