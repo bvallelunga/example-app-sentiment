@@ -12,11 +12,5 @@
   "output_scheme": {
     "texts": "object"
   },
-  "license": "Apache License",
-  "dependencies": [
-    "numpy",
-    "pandas",
-    "scikit-learn",
-    "tensorflow"
-  ]
+  "license": "Apache License"
 }
