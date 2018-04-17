@@ -6,9 +6,8 @@ https://github.com/openai/generating-reviews-discovering-sentiment
 import numpy as np
 import tensorflow as tf
 
-from utils import HyperParams
-from utils import load_model_params
-from utils import preprocess
+from .utils import HyperParams
+from .utils import preprocess
 
 MODEL_PARAMS_PATH = 'model'
 SENTIMENT_NEURON_IDX = 2388
@@ -215,10 +214,3 @@ class Model(object):
             return features[:, SENTIMENT_NEURON_IDX]
 
         self.predict = predict
-
-
-if __name__ == '__main__':
-    model = Model(load_model_params(MODEL_PARAMS_PATH))
-    text = 'You hurt my feelings.'
-    sentiment = model.predict([text])
-    print('Text: {}\nSenitment: {}\n'.format(text, sentiment))
