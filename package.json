@@ -4,7 +4,6 @@
   "keywords": "sentiment nlp",
   "description": "Discover the sentiment of texts. Trained on millions of amazon reviews.",
   "main": "app/main.py",
-  "website": "https://modeldepot.io/afowler/sentiment-neuron/overview",
   "repository": "https://github.com/DopplerFoundation/example-app-sentiment",
   "input_scheme": {
     "texts": "object"
