@@ -11,5 +11,14 @@
   "output_scheme": {
     "texts": "object"
   },
+  "input_example": {
+    "texts": ["What a beautiful product.", "The color is very dull."]
+  },
+  "output_example": {
+    "texts": {
+      "What a beautiful product.": {"score": 1.15},
+      "The color is very dull.": {"score": -0.88}
+    }
+  },
   "license": "Apache License"
 }
