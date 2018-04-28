@@ -1,18 +1,16 @@
 # Sentiment
-This app uses the "sentiment neuron" found in the OpenAI byte-level language model described in "
-Learning to Generate Reviews and Discovering Sentiment". 
+
+## App Design
+This app uses the "sentiment neuron" found in the byte-level language model described in OpenAI's paper, ["Learning to Generate 
+Reviews and Discovering Sentiment"][1]. The model weights and TensorFlow implementation can be found at the paper's 
+accompanying github repo, [openai/generating-reviews-discovering][2].
+
+The model is trained on the Amazon product review dataset, a dataset of over 82 million Amazon product reviews.
+
+## Contributing
+Code should be written for Python 3, include documentation (docstrings & comments), follow PEP 8 and pass all unittests.
+To run the unittests, simply run `python -m unittest` from the repo directory.
 
 
-## Model Background
-The model code and weights, from the paper, are open sourced. Specifically, 
-we make use of the `encoder.py` and `utils.py` files. `encoder.py` is modified such that
-the model instantiation and weight loading are decoupled allowing for faster unit testing. 
-To achieve this, we also added a `load_model_params()` function to `utils.py`.
-
-
-## Resources
-  * [OpenAI model repo](https://github.com/openai/generating-reviews-discovering-sentiment)
-  * [OpenAI model paper](https://arxiv.org/abs/1704.01444)
-  * [Model Depot example](https://modeldepot.io/afowler/sentiment-neuron/overview)
-  * [Sentiment Neuron blog post](https://rakeshchada.github.io/Sentiment-Neuron.html)
-
+[1]: https://arxiv.org/abs/1704.01444
+[2]: https://github.com/openai/generating-reviews-discovering-sentiment
