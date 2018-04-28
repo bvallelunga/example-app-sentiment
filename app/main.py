@@ -1,6 +1,9 @@
-from .encoder import Model
-from .utils import load_model_params
-import os
+# Add Current Directory to Path
+import sys, os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
+from encoder import Model
+from utils import load_model_params
 
 MODEL_PARAMS_PATH = '{}/model'.format(os.path.dirname(os.path.realpath(__file__)))
 SCORE_PRECISION = 2
