@@ -1,7 +1,8 @@
 from .encoder import Model
 from .utils import load_model_params
+import os
 
-MODEL_PARAMS_PATH = 'model'
+MODEL_PARAMS_PATH = '{}/model'.format(os.path.dirname(os.path.realpath(__file__)))
 SCORE_PRECISION = 2
 MAX_TEXT_COUNT = 10
 MAX_CHAR_COUNT = 1500
