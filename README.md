@@ -36,5 +36,10 @@ scores.
 The model was trained by a [group][1] at [OpenAI][2] on a dataset of 82 million Amazon product reviews.
 
 
+## Want To Learn More?
+See the [MAINTAINERS.md][3] to learn more about the underlying model as well as how to contribute to the app.
+
+
 [1]: https://arxiv.org/pdf/1704.01444.pdf
 [2]: https://openai.com/
+[3]: https://github.com/DopplerFoundation/example-app-sentiment/blob/master/MAINTAINERS.md

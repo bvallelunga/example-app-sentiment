@@ -4,7 +4,6 @@
   "keywords": "sentiment nlp",
   "description": "Discover the sentiment of texts. Trained on millions of amazon reviews.",
   "main": "app/main.py",
-  "website": "https://modeldepot.io/afowler/sentiment-neuron/overview",
   "repository": "https://github.com/DopplerFoundation/example-app-sentiment",
   "input_scheme": {
     "texts": "object"
@@ -12,11 +11,14 @@
   "output_scheme": {
     "texts": "object"
   },
-  "license": "Apache License",
-  "dependencies": [
-    "numpy",
-    "pandas",
-    "scikit-learn",
-    "tensorflow"
-  ]
+  "input_example": {
+    "texts": ["What a beautiful product.", "The color is very dull."]
+  },
+  "output_example": {
+    "texts": {
+      "What a beautiful product.": {"score": 1.15},
+      "The color is very dull.": {"score": -0.88}
+    }
+  },
+  "license": "Apache License"
 }
