@@ -6,8 +6,12 @@ https://github.com/openai/generating-reviews-discovering-sentiment
 import numpy as np
 import tensorflow as tf
 
-from .utils import HyperParams
-from .utils import preprocess
+# Add Current Directory to Path
+import sys, os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
+from utils import HyperParams
+from utils import preprocess
 
 MODEL_PARAMS_PATH = 'model'
 SENTIMENT_NEURON_IDX = 2388
