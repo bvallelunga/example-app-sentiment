@@ -4,15 +4,11 @@ from app.main import MAX_CHAR_COUNT
 from app.main import MAX_TEXT_COUNT
 from app.main import ModelInterface
 from app.main import SCORE_PRECISION
-from app.utils import load_model_params
-
-MODEL_PARAMS_PATH = 'app/model'
-PARAMS = load_model_params(MODEL_PARAMS_PATH)
 
 
 class TestModelInterface(unittest.TestCase):
     def setUp(self):
-        self.interface = ModelInterface(PARAMS)
+        self.interface = ModelInterface()
 
     def tearDown(self):
         self.interface = None

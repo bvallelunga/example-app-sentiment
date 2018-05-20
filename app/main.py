@@ -2,20 +2,16 @@
 import sys, os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
-from encoder import Model
-from utils import load_model_params
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-MODEL_PARAMS_PATH = '{}/model'.format(os.path.dirname(os.path.realpath(__file__)))
 SCORE_PRECISION = 2
 MAX_TEXT_COUNT = 10
 MAX_CHAR_COUNT = 1500
 
 
 class ModelInterface(object):
-    def __init__(self, params=None):
-        if params is None:
-            params = load_model_params(MODEL_PARAMS_PATH)
-        self.model = Model(params)  # very slow
+    def __init__(self):
+        self.model = SentimentIntensityAnalyzer()
 
     @staticmethod
     def is_list_of_strs(input):
@@ -31,7 +27,7 @@ class ModelInterface(object):
         if any(len(string) > MAX_CHAR_COUNT for string in input['texts']):
             raise ValueError("Number of characters per text can not exceed {}.".format(MAX_CHAR_COUNT))
 
-        scores = self.model.predict(input['texts'])
-        results = {input['texts'][i]: {'score': round(scores[i].item(), ndigits=SCORE_PRECISION)}
+        scores = [self.model.polarity_scores(text)['compound'] for text in input['texts']]
+        results = {input['texts'][i]: {'score': round(scores[i], ndigits=SCORE_PRECISION)}
                    for i in range(len(scores))}
         return {'texts': results}
