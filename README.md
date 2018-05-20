@@ -2,7 +2,7 @@
 Easily find the sentiment of a sentence targeted for social media and support messages.
 
 
-## Possible Use Cases
+## Use Cases
   * Support Routing: route inbound messages to the proper support team.
     - Have a dedicated crisis response team for negative messages
     - Use chat bots or automated replies for neutral messages
