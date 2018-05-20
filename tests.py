@@ -59,20 +59,15 @@ class TestModelInterface(unittest.TestCase):
         texts = self.interface.prediction({'texts': ['cat']})['texts']
         self.assertTrue(all(isinstance(text, str) for text in texts))
 
-    def test_texts_have_score_key(self):
-        """All texts must have a score key."""
-        texts = self.interface.prediction({'texts': ['hello world', 'foobar for days']})['texts']
-        self.assertTrue(all('score' in text for text in texts.values()))
-
     def test_scores_are_floats(self):
         """All scores must be floats."""
         texts = self.interface.prediction({'texts': ['hello world', 'foobar for days']})['texts']
-        self.assertTrue(all(isinstance(text['score'], float) for text in texts.values()))
+        self.assertTrue(all(isinstance(text, float) for text in texts.values()))
 
     def test_scores_have_correct_precision(self):
         """All scores must have the correct precision."""
         texts = self.interface.prediction({'texts': ['hello world', 'foobar for days']})['texts']
-        self.assertTrue(all(text['score'] == round(text['score'], ndigits=SCORE_PRECISION) for text in texts.values()))
+        self.assertTrue(all(text == round(text['score'], ndigits=SCORE_PRECISION) for text in texts.values()))
 
 
 if __name__ == '__main__':
