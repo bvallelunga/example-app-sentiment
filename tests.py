@@ -67,7 +67,7 @@ class TestModelInterface(unittest.TestCase):
     def test_scores_have_correct_precision(self):
         """All scores must have the correct precision."""
         texts = self.interface.prediction({'texts': ['hello world', 'foobar for days']})['texts']
-        self.assertTrue(all(text == round(text['score'], ndigits=SCORE_PRECISION) for text in texts.values()))
+        self.assertTrue(all(text == round(text, ndigits=SCORE_PRECISION) for text in texts.values()))
 
 
 if __name__ == '__main__':
