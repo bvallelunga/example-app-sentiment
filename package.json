@@ -2,7 +2,7 @@
   "name": "Sentiment",
   "slug": "sentiment",
   "keywords": "sentiment nlp",
-  "description": "Discover the sentiment of texts. Trained on millions of amazon reviews.",
+  "description": "Easily find the sentiment of a sentence targeted for social media and support messages.",
   "main": "app/main.py",
   "repository": "https://github.com/DopplerFoundation/example-app-sentiment",
   "input_scheme": {
@@ -16,8 +16,12 @@
   },
   "output_example": {
     "texts": {
-      "What a beautiful product.": {"score": 1.15},
-      "The color is very dull.": {"score": -0.88}
+      "The book was good.": 0.4404,
+      "At least it isn't a horrible book.": 0.431,
+      "The book was only kind of good.": 0.3832,
+      "Today SUX!": -0.5461,
+      "John is not smart, handsome, nor funny.": -0.7424,
+      "The plot was good, but the characters are uncompelling and the dialog is not great.": -0.7042
     }
   },
   "license": "Apache License"

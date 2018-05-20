@@ -1,16 +1,16 @@
 # Sentiment
-Easily find the sentiment of a sentence; trained on millions of praising, neutral, and negative Amazon reviews.
+Easily find the sentiment of a sentence targeted for social media and support messages.
 
 **Possible Use Cases**
-  * active support: route tweets and support emails to the proper support team.
-     - negative sentiment messages to crisis support
-     - neutral sentiment with automated replies
-  * discover extremely positive messages as showcases of happy customers
-  * filter extremely negative messages in chat rooms
+  * Support Routing: route inbound messages to the proper support team.
+    - Have a dedicated crisis response team for negative messages
+    - Use chat bots or automated replies for neutral messages
+  * Discover extremely positive messages as showcases of happy customers
+  * Filter extremely negative messages in chat rooms
   
 
 ## Input Scheme
-The input should contain an array of texts. 
+The input should contain an array of messages. 
 ``` json
 {
   "texts": ["What a beautiful product.", "The color is very dull."]
@@ -18,15 +18,19 @@ The input should contain an array of texts.
 ```
 
 ## Output Scheme
-The output will map each input text to a score. Positive texts receive positive scores while negative texts receive negative
+The output will map each input message to a score. Positive texts receive positive scores while negative texts receive negative
 scores. 
  
 ``` json
 {
   "texts": 
     {
-      "What a beautiful product.": {"score": 1.15},
-      "The color is very dull.": {"score": -0.88}
+      "The book was good.": 0.4404,
+      "At least it isn't a horrible book.": 0.431,
+      "The book was only kind of good.": 0.3832,
+      "Today SUX!": -0.5461,
+      "John is not smart, handsome, nor funny.": -0.7424,
+      "The plot was good, but the characters are uncompelling and the dialog is not great.": -0.7042
     }
  }
 ```
