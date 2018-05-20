@@ -28,6 +28,5 @@ class ModelInterface(object):
             raise ValueError("Number of characters per text can not exceed {}.".format(MAX_CHAR_COUNT))
 
         scores = [self.model.polarity_scores(text)['compound'] for text in input['texts']]
-        results = {input['texts'][i]: {'score': round(scores[i], ndigits=SCORE_PRECISION)}
-                   for i in range(len(scores))}
+        results = { input['texts'][i]: round(scores[i], ndigits=SCORE_PRECISION) for i in range(len(scores)) }
         return {'texts': results}
