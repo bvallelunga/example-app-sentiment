@@ -1,5 +1,5 @@
 # Sentiment
-Easily find the sentiment of a sentence; trained on millions of praising, neutral, and negative Amazon reviews.
+Easily find the sentiment of a sentence.
 
 **Possible Use Cases**
   * active support: route tweets and support emails to the proper support team.
