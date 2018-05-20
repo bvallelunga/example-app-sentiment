@@ -1,16 +1,17 @@
 # Sentiment
 
 ## App Design
-This app uses the "sentiment neuron" found in the byte-level language model described in OpenAI's paper, ["Learning to Generate 
-Reviews and Discovering Sentiment"][1]. The model weights and TensorFlow implementation can be found at the paper's 
-accompanying github repo, [openai/generating-reviews-discovering][2].
+This app uses VADER. VADER is lexicon and rule-based i.e. it is not
+trained on any specific dataset. However, the model is "specifically
+attuned to sentiments expressed in social media".
 
-The model is trained on the Amazon product review dataset, a dataset of over 82 million Amazon product reviews.
+More information on VADER can be found in the [research paper][1] and
+accompanying [github repo][2].
 
 ## Contributing
 Code should be written for Python 3, include documentation (docstrings & comments), follow PEP 8 and pass all unittests.
 To run the unittests, simply run `python -m unittest` from the repo directory.
 
 
-[1]: https://arxiv.org/abs/1704.01444
-[2]: https://github.com/openai/generating-reviews-discovering-sentiment
+[1]: http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf
+[2]: https://github.com/cjhutto/vaderSentiment
