@@ -1,4 +1,4 @@
-# Sentiment
+# Social Sentiment
 Easily find the sentiment of a sentence targeted for social media and support messages.
 
 
