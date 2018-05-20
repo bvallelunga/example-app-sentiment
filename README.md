@@ -10,7 +10,7 @@ Easily find the sentiment of a sentence targeted for social media and support me
   
 
 ## Input Scheme
-The input should contain an array of messages. 
+The input should contain an array of texts. 
 ``` json
 {
   "texts": ["What a beautiful product.", "The color is very dull."]
