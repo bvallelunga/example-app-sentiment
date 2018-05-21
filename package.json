@@ -12,7 +12,14 @@
     "texts": "object"
   },
   "input_example": {
-    "texts": ["What a beautiful product.", "The color is very dull."]
+    "texts": [
+      "The book was good.",
+      "At least it isn't a horrible book.",
+      "The book was only kind of good.",
+      "Today SUX!",
+      "John is not smart, handsome, nor funny.",
+      "The plot was good, but the characters are uncompelling and the dialog is not great."
+    ]
   },
   "output_example": {
     "texts": {
