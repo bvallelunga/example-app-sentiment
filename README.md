@@ -32,16 +32,15 @@ scores.
  
 ``` json
 {
-  "texts": 
-    {
-      "The book was good.": 0.4404,
-      "At least it isn't a horrible book.": 0.431,
-      "The book was only kind of good.": 0.3832,
-      "Today SUX!": -0.5461,
-      "John is not smart, handsome, nor funny.": -0.7424,
-      "The plot was good, but the characters are uncompelling and the dialog is not great.": -0.7042
-    }
- }
+  "texts": {
+    "The book was good.": 0.4404,
+    "At least it isn't a horrible book.": 0.431,
+    "The book was only kind of good.": 0.3832,
+    "Today SUX!": -0.5461,
+    "John is not smart, handsome, nor funny.": -0.7424,
+    "The plot was good, but the characters are uncompelling and the dialog is not great.": -0.7042
+  }
+}
 ```
 
 
